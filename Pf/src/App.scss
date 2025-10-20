@@ -1,0 +1,36 @@
+header{
+  position: fixed;
+  top:0;left:0;
+  z-index: 10;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid;
+  
+}
+a{text-decoration: none;color: inherit;}
+li{list-style: none;}
+.fullpage-container{
+  width: 100%;
+  height: 100%;
+  .section {
+    width: 100vw;
+    height: 100vh;
+    $class: sec1, sec2, sec3, sec4;
+    $color: brown,skyblue,pink,beige;
+
+    @each $cls, $clr in zip($class, $color) {
+      &.#{$cls} {
+        background-color: $clr;
+      }
+    }
+  }
+}
+.skills-content{
+  font-size: 30px;
+}
+
+
+.fp-watermark {
+  display: none !important;
+}
